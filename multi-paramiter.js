@@ -23,3 +23,9 @@ firstNumber = 10;
 secondNumber = 5;
 var result = multTwoNumbers(firstNumber, secondNumber);
 console.log('The Results is: ',result );
+
+
+<!--
+function add(number1, number2){
+
+}-->
