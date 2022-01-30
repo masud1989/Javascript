@@ -26,6 +26,8 @@ var inch = feetToInch (myFeet);
 console.log('The Converted vale of Feet: ', inch); 
 
 
+
+
 // Converting Mile to Kilometer
 function mileToKm(miles){
     var km = miles * 1.60934;
