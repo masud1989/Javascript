@@ -25,7 +25,6 @@ console.log(totalCost);
 
 
 // Problem 3: Picnic Budget
-
 function picnicBudget(participants){
     const firstRate = 5000;
     const secondRate = 4000;
@@ -46,15 +45,27 @@ function picnicBudget(participants){
         const secondOptionParticipants = 100;
 
         const firstOptionBudget = 100 * firstRate;
-        // const secondParticipants = participants - 100;
         const secondOptionBudget = secondOptionParticipants * secondRate;
         const thirdOptionParticipants = participants - firstOptionParticipants - secondOptionParticipants;
         const thirdOptionBudget = thirdOptionParticipants * thirdRate;
         const thirdOptionBudgetTotal = firstOptionBudget + secondOptionBudget + thirdOptionBudget;
         return thirdOptionBudgetTotal;
     }
-
-
 }
+
  var totalBudget = picnicBudget(301);
  console.log(totalBudget);
+
+
+ 
+// Problem 4: Odd Friend
+const friendArray = [ "Polash", "Rubel", "Shohel", "Poley", "Moley", "Koney", "Sonya"];
+function oddFriend(friendArray) {
+    for (let i = 0; i < friendArray.length; i++) {
+      if (friendArray[i].length % 2 != 0) {
+        return friendArray[i];
+      }
+    }
+  }
+  const myFriend = oddFriend(friendArray);
+  console.log(myFriend);
