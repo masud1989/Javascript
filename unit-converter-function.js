@@ -35,3 +35,17 @@ function mileToKm(miles){
 var myMiles = 10;
 var myKm = mileToKm(10);
 console.log('The Converted vale of Miles: ', myKm);
+
+
+
+
+
+// Converting Ana to Vori
+function anaToVori(ana){
+    var vori = ana/16;
+    return vori;
+}
+
+
+var vori = anaToVori(16);
+console.log(vori);
