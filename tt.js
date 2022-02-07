@@ -1,7 +1,3 @@
-
-// Assignment-4 
-// =============================================================================
-
 // Problem 1: ana to vori
 function anaToVori (ana){
     var vori = ana / 16;

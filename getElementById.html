@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+
+    </header>
+
+    <main>
+        <section>
+            <article class="blog">
+                <h1>This is Blog Title-1</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita atque a ducimus ex itaque animi voluptas eos tempora, beatae sapiente molestiae fugit delectus assumenda alias harum omnis obcaecati natus necessitatibus.</p>
+            </article>
+            <article class="blog">
+                <h1 id="second-title">This is Blog Title-2</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita atque a ducimus ex itaque animi voluptas eos tempora, beatae sapiente molestiae fugit delectus assumenda alias harum omnis obcaecati natus necessitatibus.</p>
+            </article>
+            <article class="blog">
+                <h1 id="third-title">This is Blog Title-3</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita atque a ducimus ex itaque animi voluptas eos tempora, beatae sapiente molestiae fugit delectus assumenda alias harum omnis obcaecati natus necessitatibus.</p>
+            </article>
+            <article class="blog">
+                <h1>This is Blog Title-4</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita atque a ducimus ex itaque animi voluptas eos tempora, beatae sapiente molestiae fugit delectus assumenda alias harum omnis obcaecati natus necessitatibus.</p>
+            </article>
+            
+        </section>
+    </main>
+    <script>
+        //const paragraph = document.getElementsByTagName(p);
+        //paragraph.style.background = 'gray';
+
+        //getElementById
+        const secondTitle = document.getElementById('second-title');
+        secondTitle.style.textAlign = 'center';
+        secondTitle.style.color = 'green';
+        secondTitle.style.background = 'gray';
+        const thirdTitle = document.getElementById('third-title');
+        thirdTitle.style.background = 'tomato';
+        thirdTitle.style.color = 'green';
+        thirdTitle.style.padding = '10px';
+        thirdTitle.style.borderRadius = '5px';
+
+
+        //getElementsByClassName
+        const blogs = document.getElementsByClassName('blog');
+        for (const blog of blogs){
+            blog.style.border = '2px solid orange';
+            blog.style.borderRadius = '12px';
+            blog.style.margin = '5px';
+            blog.style.padding = '5px';
+        }
+
+    </script>
+</body>
+</html>
