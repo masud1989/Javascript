@@ -8,7 +8,8 @@
 </head>
 <body>
     <header>
-
+        <!-- This is Header Part -->
+        <h1 onclick="alert('Valo hoye zao')">Click me</h1>
     </header>
 
     <main>
@@ -29,6 +30,11 @@
                 <h1>This is Blog Title-4</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita atque a ducimus ex itaque animi voluptas eos tempora, beatae sapiente molestiae fugit delectus assumenda alias harum omnis obcaecati natus necessitatibus.</p>
             </article>
+
+            <button id="make-green-button">Click me to Green</button>
+            <button id="make-golden-rod">Click me to Golden Rod</button>
+            <button id="make-hot-pink">Click me to Hot Pink</button>
+            <button id="light-blue">Click me to Light Blue</button>
             
         </section>
     </main>
@@ -54,8 +60,35 @@
             blog.style.border = '2px solid orange';
             blog.style.borderRadius = '12px';
             blog.style.margin = '5px';
-            blog.style.padding = '5px';
+            blog.style.padding = '15px';
+            blog.style.background = 'gray';
         }
+
+        // Green Button Setting 
+        const greenButton = document.getElementById('make-green-button');
+        greenButton.onclick = function (){
+            document.body.style.backgroundColor = 'green';
+        }
+
+
+         // Golden Rod Button Setting 
+         const goldenButton = document.getElementById('make-golden-rod');
+         goldenButton.addEventListener('click', makeGoldenRod)
+        
+         function makeGoldenRod(){
+           document.body.style.backgroundColor = 'goldenrod'
+        }
+
+        //Hot Pink Button
+        const hotPinkButton = document.getElementById('make-hot-pink');
+        hotPinkButton.addEventListener('click', function hotPink(){
+            document.body.style.backgroundColor = 'hotpink';
+        })
+
+        //Light Blue Button
+        document.getElementById('light-blue').addEventListener('click', function(){
+            document.body.style.backgroundColor = 'lightblue';
+        })
 
     </script>
 </body>
