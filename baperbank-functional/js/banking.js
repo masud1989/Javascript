@@ -15,28 +15,29 @@ function updateTotalField(totalFieldId, inputAmount){
     amountExist.innerText = inputAmount + existAmount;
 }
 
-// deposite option 
-document.getElementById('deposite-btn').addEventListener('click', function(){
-    const depositeAmount = getInputValue('deposite-amount');
-    updateTotalField('deposite-total', depositeAmount);
-  
-
-    // update balance 
+function updateBalance(depositeAmount){
     const balanceTotal = document.getElementById('balance-total');
     const balanceTotalText = balanceTotal.innerText;
     const balanceTotalExist = parseFloat(balanceTotalText);
     balanceTotal.innerText = balanceTotalExist + depositeAmount; 
+}
+
+// deposite option 
+document.getElementById('deposite-btn').addEventListener('click', function(){
+    const depositeAmount = getInputValue('deposite-amount');
+    updateTotalField('deposite-total', depositeAmount);
+
+    // update balance 
+    updateBalance(depositeAmount);
 });
+
 
 // withdraw option 
 document.getElementById('withdraw-btn').addEventListener('click', function(){
     const withDrawAmount = getInputValue('withdraw-amount');
     updateTotalField('withdraw-total', withDrawAmount);
 
-
     // update balance 
     const balanceTotal = document.getElementById('balance-total');
-    const balanceTotalText = balanceTotal.innerText;
-    const balanceTotalExist = parseFloat(balanceTotalText);
-    balanceTotal.innerText = balanceTotalExist - withDrawAmount;
+    updateBalance(-withDrawAmount);
 })
