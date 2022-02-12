@@ -7,15 +7,19 @@ function getInputValue(inputId){
     return inputAmount;
 }
 
+function updateTotalField(totalFieldId, depositeAmount){
+    const amountExist = document.getElementById(totalFieldId);
+    const amountExistText = amountExist.innerText;
+    const existAmount = parseFloat(amountExist.innerText);
+
+    amountExist.innerText = depositeAmount + existAmount;
+}
 
 // deposite option 
-// ===============================================================================
 document.getElementById('deposite-btn').addEventListener('click', function(){
     const depositeAmount = getInputValue('deposite-amount');
-    const depositeExist = document.getElementById('deposite-total');
-    const depositeExistText = depositeExist.innerText;
-    const depositeExistAmount = parseFloat(depositeExist.innerText);
-    depositeExist.innerText = depositeAmount + depositeExistAmount;
+    updateTotalField('deposite-total', depositeAmount);
+  
 
     // update balance 
     const balanceTotal = document.getElementById('balance-total');
@@ -25,14 +29,11 @@ document.getElementById('deposite-btn').addEventListener('click', function(){
 });
 
 // withdraw option 
-// ===============================================================================
 document.getElementById('withdraw-btn').addEventListener('click', function(){
     const withDrawAmount = getInputValue('withdraw-amount');
-    const withDrawExist = document.getElementById('withdraw-total');
-    const withDrawExistText = withDrawExist.innerText;
-    const withDrawExistAmount = parseFloat(withDrawExistText);
-    withDrawExist.innerText = withDrawExistAmount + withDrawAmount;
+    updateTotalField('withdraw-total', withDrawAmount);
 
+    
     // update balance 
     const balanceTotal = document.getElementById('balance-total');
     const balanceTotalText = balanceTotal.innerText;
