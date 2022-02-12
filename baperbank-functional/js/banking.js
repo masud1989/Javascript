@@ -24,8 +24,8 @@ function getCurrentBalance(){
 
 function updateBalance(depositeAmount, isDeposite){
      const balanceTotal = document.getElementById('balance-total');
-    // const balanceTotalText = balanceTotal.innerText;
-    // const balanceTotalExist = parseFloat(balanceTotalText);
+    const balanceTotalText = balanceTotal.innerText;
+    const balanceTotalExist = parseFloat(balanceTotalText);
     const previousBalanceTotal = getCurrentBalance();
     if(isDeposite == true){
         balanceTotal.innerText = balanceTotalExist + depositeAmount; 
