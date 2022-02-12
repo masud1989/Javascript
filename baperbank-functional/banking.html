@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Banking Page</title>
+</head>
+<body>
+    <header class="mx-auto bg-green-300 w-3/4 p-1 rounded mt-10">
+        <h1 class="text-center text-6xl font-bold mt-10 px-10 mb-10">Welcome <span class="text-red-500">User</span> </h1>
+    </header>
+
+    <main>
+        <!-- Balance and Transaction  -->
+        <section class="mt-8 w-3/4 mx-auto" > 
+           <div class="grid grid-cols-3 gap-4 ">
+                <div class="bg-blue-400 p-8 rounded">
+                    <h3 class="text-3xl text-white font-bold">Deposite:</h3>
+                    <h4 class="text-2xl text-white font-semibold">$<span id="deposite-total">00</span> </h4>
+                </div>
+                <div class="bg-green-400 p-8 rounded">
+                    <h3 class="text-3xl text-white font-bold">Withdraw:</h3>
+                    <h4 class="text-2xl text-white font-semibold">$<span id="withdraw-total">00</span> </h4>
+                    <!-- <h4 class="text-2xl text-white font-semibold">$<span id="deposite-total">00</span> </h4> -->
+                </div>
+                <div class="bg-yellow-400 p-8 rounded">
+                    <h3 class="text-3xl text-white font-bold">Balance:</h3>
+                    <h4 class="text-2xl text-white font-semibold">$<span id="balance-total">1200</span></h4>
+                </div>
+           </div>
+        </section>
+
+        <!-- Withdraw and Deposite  -->
+        <section class="mt-8 w-3/4 mx-auto">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-red-100 p-8 rounded">
+                    <h3 class="text-3xl mb-5">Please Deposite</h3>
+                    <input id="deposite-amount" class="block px-5 py-2 mb-10 w-3/4 border-2 rounded-xl border-lime-400 " type="text" placeholder="$ Deposite Amount">
+                    <button id="deposite-btn" class="bg-orange-700 rounded-xl px-5 py-3 text-white text-xl font-semibold mb-5">Deposite</button>
+                </div>
+                <div class="bg-purple-300 p-8 rounded">
+                    <h3 class="text-3xl mb-5">Please Withdraw</h3>
+                    <input id="withdraw-amount" class="block px-5 py-2 mb-10 w-3/4 border-2 rounded-xl border-lime-400 " type="text" placeholder="$ Withdraw Amount">
+                    <button id="withdraw-btn" class="bg-green-300 rounded-xl px-5 py-3 text-dark text-xl font-semibold mb-5">Withdraw</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mt-8 w-3/4 mx-auto text-center  bg-gray-400 text-white mb-5 p-5 rounded-l ">
+        <p>Copyright@All right reserved </p>
+    </footer>
+    <script src="js/banking.js"></script>
+</body>
+</html>
