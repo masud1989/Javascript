@@ -10,9 +10,30 @@ function updateProductQuatity(product, price, isPlus){
     }
     // update Total
     productInput.value = productQuantity;
-    const caseTotal = document.getElementById(product+ '-total');
-    caseTotal.innerText = productQuantity * price;  
+    const productTotal = document.getElementById(product+ '-total');
+    productTotal.innerText = productQuantity * price;  
+    //Calculate Total
+    calculateTotal();
 }
+
+function getQuantity(product){
+    const productInput = document.getElementById(product+'-quantity');
+    const productQuantity = parseInt(productInput.value);
+    return productQuantity;
+}
+function calculateTotal(){
+    const phoneTotal = getQuantity('phone') * 1219;
+    const caseTotal = getQuantity('case') * 59;
+    const subTotal = phoneTotal + caseTotal;
+    const tax = subTotal * 0.1;
+    const total = subTotal + tax;
+
+    // update on html 
+    document.getElementById('sub-total').innerText = subTotal;
+    document.getElementById('tax-amount').innerText = tax;
+    document.getElementById('total-amount').innerText = total;
+}
+
 // Handle phone plus minus
 document.getElementById('phone-plus').addEventListener('click', function(){
     updateProductQuatity('phone', 1219, true);
@@ -30,3 +51,4 @@ document.getElementById('case-plus').addEventListener('click', function(){
 document.getElementById('case-minus').addEventListener('click', function(){
     updateProductQuatity('case', 59, false);
 })
+
