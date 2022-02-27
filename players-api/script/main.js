@@ -19,15 +19,17 @@ const displayPlayer = (playerData) =>{
             `<div class="card mt-5" style="width: 18rem;">
                 <img class="w-50" src="${player.strThumb}" class="card-img-top" alt="...">
                 <div class="card-body">
-                <h3 class="card-title">Name: </h3>
-                <h4 class="card-title">Team: </h4>
-                <h5 class="card-title">Country: </h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h3 class="card-title bg-light text-center text-danger">Name: ${player.strPlayer} </h3>
+                <h3 class="card-title bg-light text-center text-success">Name: ${player.idPlayer} </h3>
+                <h4 class="card-title">Team: ${player.strTeam} </h4>
+                <h5 class="card-title">Country: ${player.strNationality}</h5>
+                <p class="card-text">${player.strDescriptionIT}</p>
                 <button href="#" class="btn btn-danger">Delete</button>
                 <button href="#" class="btn btn-success">Details</button>
                 </div>
             </div>
         `
         playerContainer.appendChild(div);
+        console.log(player)
     }
 }
